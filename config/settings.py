@@ -17,7 +17,7 @@ SECRET_KEY = 'uh5_0!vi%u3how07glwe24+hd_(dsnefa&mcx+6rhvwop7-bby'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['x23244119musicapp-env.eba-wgqria3f.eu-west-1.elasticbeanstalk.com','*','https://9843a0ad33b1493b8511ed51faa6477e.vfs.cloud9.eu-west-1.amazonaws.com'] #pylint: disable=line-too-long
+ALLOWED_HOSTS = ['x23244119darkwave-env.eba-339q5skk.us-east-1.elasticbeanstalk.com','*','9843a0ad33b1493b8511ed51faa6477e.vfs.cloud9.eu-west-1.amazonaws.com'] #pylint: disable=line-too-long
 
 # Application definition
 
