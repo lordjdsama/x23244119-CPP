@@ -1,0 +1,24 @@
+{% extends 'lessons/base.html' %}
+
+{% block content %}
+<div class="home">
+
+<h1 data-hover="DarkWave">Welcome to DarkWave Family</h1>
+</div>
+<div class="maincard">
+{% for lesson in lessons %}
+<div class="card" id="card">
+<div class="card-body">
+<h5 class="card-title" id="name">Say hi to- {{ lesson.title }}</h5>
+<h6 class="card-title" id="by"> {{ lesson.author }} </h6>
+<a href="{{ lesson.add_bio_with_link }}" class="card-subtitle mb-2 text-muted"><h6>Checkout my bio</h6></a>
+<p class="card-text">
+    
+    {{ lesson.chord }}
+</p>
+
+<a href="{% url 'lessons-detail' lesson.pk  %}" class="card-link">View Artist</a>
+</div>
+</div>
+</div>
+{% endfor %} {% endblock content %}

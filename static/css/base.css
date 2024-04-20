@@ -1,0 +1,176 @@
+
+
+/*wellcome to darkwave*/
+
+
+.home
+{
+    text-align: center;
+  position: relative;
+  animation: mymove 3s ;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /*color: white*/
+}
+
+
+h1{
+  font-family: 'Passion One', cursive;
+  text-transform:uppercase;
+  color: 	#FEFEFE;
+  text-shadow:
+    0px 0px 20px #b0ffb4,
+    0px 0px 60px #b5fdb9,
+    0px 0px 70px #bdffc1,
+    0px 0px 80px  	#c9ffbd,
+    0px 0px 90px #d6ffbd;  
+}
+h1:hover{
+font-size: 0;
+}
+h1:hover:before{
+   content: attr(data-hover);
+   font-size:50px;
+   font-family: 'Passion One', cursive;
+   text-transform:uppercase;
+    color:#FEBAAD;
+    text-shadow:
+     0px 0px 90px #FBAED2,
+    0px 0px 100px #FFB7D5,
+    0px 0px 110px #FFA6C9,
+    0px 0px 120px  	#F7468A,
+    0px 0px 130px #E30B5C;
+}
+
+
+
+@keyframes mymove {
+  from {left: -100%;}
+  to {left: 2%;}
+}
+#by{
+    text-align: right;
+}
+img{
+   
+padding-top: 10px;
+    
+}
+
+
+/*things that are written*/
+.card{
+    background-color:#fbfefb;
+    width: 500px;
+}
+.maincard{
+    padding-top: 50px;
+  margin-left: 27%
+}
+
+/*contact page*/
+.contact{
+    text-align: center
+}
+
+/*Css magic*/
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+
+body {
+  min-height: 100vh;
+  background: #212534;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+
+.card {
+  background: #191c29;
+  width: 500px;
+  height: 230px;
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+}
+
+.card:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+/*.kamil{*/
+/*  width: 201px;*/
+/*  height: 261px;*/
+/*}*/
+
