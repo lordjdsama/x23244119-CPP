@@ -42,10 +42,3 @@ phases:
             - cat result.json
             - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
             
-phases:
-    build:
-        commands:
-            - # Your build commands here
-
-eb_codebuild_settings:
-  use_images: true
